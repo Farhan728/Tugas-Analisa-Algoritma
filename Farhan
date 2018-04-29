@@ -5,7 +5,7 @@ class Tumpukan
     
     public static void push(String tumpukan[], String data) 
     {
-	      if(atas >= batasAtas)
+	if(atas >= batasAtas)
             System.out.println("Tumpukan penuh");
         else 
             {            
@@ -18,35 +18,35 @@ class Tumpukan
     public static String pop(String tumpukan[])
     {
 	    String hasilPop = " ";
-            if(atas < 0)
-		        hasilPop = "Tumpukan kosong";
-            else 
-            {		
-		        hasilPop = tumpukan[atas];
-		        tumpukan[atas] = null;
-		        atas--;
+              if(atas < 0)
+		hasilPop = "Tumpukan kosong";
+              else 
+              {		
+	      	hasilPop = tumpukan[atas];
+		tumpukan[atas] = null;
+		atas--;
             }
             return (hasilPop);
     }
 
     public static void bacaTumpukan(String tumpukan[]) 
     {
-	       System.out.println("Kondisi tumpukan : ");
+	    System.out.println("Kondisi tumpukan : ");
             for (int i = batasAtas; i >= 0; i--) 
             {
-		        if(i == atas)
-            System.out.println(i + "." + tumpukan[i] + " atas");
-		        else
-            System.out.println(i + "." + tumpukan[i]);
+	    if(i == atas)
+              System.out.println(i + "." + tumpukan[i] + " atas");
+	    else
+              System.out.println(i + "." + tumpukan[i]);
             }
     }
 	
     public static void clear(String tumpukan[])
     {
         System.out.println("Bersihkan tumpukan");
-	        for (int i = batasAtas; i >= 0; i--) 
+	    for (int i = batasAtas; i >= 0; i--) 
             {
-            pop(tumpukan); 
+             pop(tumpukan); 
             }
     }
 
@@ -61,7 +61,7 @@ class Tumpukan
 	  bacaTumpukan(tumpukan);
 
         System.out.println();
-    push(tumpukan, "Buku E");
+    	  push(tumpukan, "Buku E");
 	  push(tumpukan, "Buku F");
 	  push(tumpukan, "Buku G");
         
@@ -91,7 +91,7 @@ class Tumpukan
 	  System.out.println("POP : " + pop(tumpukan));
 	  bacaTumpukan(tumpukan);
 	  clear(tumpukan);
-	  System.out.println();
+	System.out.println();
 	  bacaTumpukan(tumpukan);
     }
 }
